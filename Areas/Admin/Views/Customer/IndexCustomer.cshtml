@@ -1,0 +1,43 @@
+﻿
+@model List<Models1.Framework.Customer>
+@{
+    ViewBag.Title = "IndexCustomer";
+    Layout = "/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<div class="card mb-4">
+    <div class="card-header">
+        <i class="fas fa-table me-1"></i>
+        Customer
+    </div>
+    <div class="card-body">
+        <table id="datatablesSimple">
+            <thead>
+                <tr>
+
+                    <th>CustomerID</th>
+                    <th>FullName</th>
+                    <th>Email</th>
+                    <th>PhoneNumber</th>
+                    <th>Address</th>
+                    <th>Date</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.CustomerID</td>
+                        <td>@item.FullName</td>
+                        <td>@item.Email</td>
+                        <td>@item.PhoneNumber</td>
+                        <td>@item.Address</td>
+                        <td>@item.Date</td>
+                        <td>item.Action</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
